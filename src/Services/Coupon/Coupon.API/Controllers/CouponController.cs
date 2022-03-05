@@ -53,9 +53,7 @@
                 return NotFound(coupon == null ? "ERROR: The coupon doesn't exist" : "ERROR: The coupon has been redeemed already");
 
             var couponDto = _mapper.Translate(coupon);
-
             _logger.LogInformation("Applying coupon {CouponCode}", code);
-            
             return couponDto;
         }
     }
